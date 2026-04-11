@@ -259,9 +259,6 @@ body::after {
 }
 
 .hero-name h1 .dim {
-  color: var(--muted2);
-}
-.hero-name h1 .hl {
   color: var(--accent);
 }
 

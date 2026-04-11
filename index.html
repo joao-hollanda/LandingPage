@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    
     <!-- Cursor -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
@@ -204,9 +205,9 @@
             <div class="skill-icon">AI.</div>
             <div class="skill-name">IA & LLMs</div>
             <div class="skill-desc">
-              Function calling, otimização de tokens e context injection persistente.
-              Roadmap de 6 meses em execução — de prompt engineering até agent
-              orchestration.
+              Function calling, otimização de tokens e context injection
+              persistente. Roadmap de 6 meses em execução — de prompt
+              engineering até agent orchestration.
             </div>
             <div class="skill-level">
               <div class="dot fill"></div>
@@ -317,10 +318,15 @@
               <div class="dots"><span></span><span></span><span></span></div>
               <div class="url-bar">https://learnly-edu.vercel.app/</div>
             </div>
-            <iframe
-              src="https://learnly-edu.vercel.app/"
-              title="Demo do Projeto"
-            ></iframe>
+
+            <div class="browser-iframe-wrap" id="iframeWrap">
+              <iframe
+                id="previewFrame"
+                src="https://learnly-edu.vercel.app/"
+                title="Demo do Projeto"
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </section>
       </section>
@@ -336,7 +342,8 @@
               <div class="hi-desc">
                 Não escrevo código antes de pensar no sistema. Tomo decisões com
                 raciocínio de trade-off — algo incomum pro meu nível de
-                experiência. Clean Architecture é a base, mas o foco é sempre no impacto de produto e negócio, não na arquitetura por si só.
+                experiência. Clean Architecture é a base, mas o foco é sempre no
+                impacto de produto e negócio, não na arquitetura por si só.
               </div>
             </div>
           </div>
@@ -383,9 +390,9 @@
             <div class="hi-content">
               <div class="hi-title">Projeto Que Virou Produto</div>
               <div class="hi-desc">
-                O Learnly recebeu oferta de divulgação em escolas — isso é validação
-                externa real, não pitch. Faz toda a diferença na forma como
-                penso escala, multi-tenancy e feature prioritization.
+                O Learnly recebeu oferta de divulgação em escolas — isso é
+                validação externa real, não pitch. Faz toda a diferença na forma
+                como penso escala, multi-tenancy e feature prioritization.
               </div>
             </div>
           </div>
@@ -663,6 +670,41 @@
       document
         .querySelectorAll(".reveal")
         .forEach((el) => observer.observe(el));
+
+      (function () {
+        var IFRAME_W = 1280;
+        var IFRAME_H = 900;
+
+        function scale() {
+          var wrap = document.getElementById("iframeWrap");
+          var frame = document.getElementById("previewFrame");
+          if (!wrap || !frame) return;
+
+          var w = wrap.parentElement.offsetWidth;
+          if (w === 0) return;
+
+          var s = w / IFRAME_W;
+          frame.style.transform = "scale(" + s + ")";
+          frame.style.transformOrigin = "top left";
+          wrap.style.height = IFRAME_H * s + "px";
+        }
+
+        window.addEventListener("load", function () {
+          scale();
+          setTimeout(scale, 300);
+        });
+
+        var t;
+        window.addEventListener("resize", function () {
+          clearTimeout(t);
+          t = setTimeout(scale, 60);
+        });
+      })();
+
+      window.onscroll = function () {
+        updateProgress();
+      };
+
     </script>
   </body>
 </html>

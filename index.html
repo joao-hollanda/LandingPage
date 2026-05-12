@@ -817,6 +817,8 @@
     </button>
 
     <script>
+      const isTouch = window.matchMedia("(hover: none)").matches;
+
       // Custom cursor
       const cursor = document.getElementById("cursor");
       const ring = document.getElementById("cursorRing");
@@ -825,7 +827,13 @@
         rx = 0,
         ry = 0;
 
-      document.addEventListener("mousemove", (e) => {
+      if (isTouch) {
+        cursor.style.display = "none";
+        ring.style.display = "none";
+        document.body.style.cursor = "auto";
+      }
+
+      if (!isTouch) document.addEventListener("mousemove", (e) => {
         mx = e.clientX;
         my = e.clientY;
         cursor.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
@@ -837,9 +845,9 @@
         ring.style.transform = `translate(${rx - 16}px, ${ry - 16}px)`;
         requestAnimationFrame(animRing);
       }
-      animRing();
+      if (!isTouch) animRing();
 
-      document
+      if (!isTouch) document
         .querySelectorAll(
           "a, button, .skill-card, .highlight-item, .stack-item",
         )
@@ -1164,6 +1172,7 @@
 
       // ─── CURSOR TRAIL ─────────────────────────
       function initTrail() {
+        if (isTouch) return;
         const canvas = document.getElementById("trailCanvas");
         if (!canvas) return;
         const ctx = canvas.getContext("2d");
@@ -1201,7 +1210,7 @@
         const hero = canvas.parentElement;
         const resize = () => { canvas.width = hero.offsetWidth; canvas.height = hero.offsetHeight; };
         resize(); window.addEventListener("resize", resize);
-        const COUNT = 55;
+        const COUNT = isTouch ? 20 : 55;
         const pts = Array.from({ length: COUNT }, () => ({
           x: Math.random() * canvas.width, y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 0.22, vy: (Math.random() - 0.5) * 0.22,

@@ -871,7 +871,7 @@
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
           100;
         scrollLine.style.width = pct + "%";
-      });
+      }, { passive: true });
 
       // Reveal on scroll + stagger children
       const STAGGER_SELECTORS = ".skill-card, .highlight-item, .tech-card, .timeline-item";
@@ -919,16 +919,18 @@
 
       // Browser frame cursor swap
       const browserFrame = document.querySelector(".browser-frame");
-      browserFrame.addEventListener("mouseenter", () => {
-        cursor.style.opacity = "0";
-        ring.style.opacity = "0";
-        document.body.style.cursor = "auto";
-      });
-      browserFrame.addEventListener("mouseleave", () => {
-        cursor.style.opacity = "1";
-        ring.style.opacity = "1";
-        document.body.style.cursor = "none";
-      });
+      if (!isTouch) {
+        browserFrame.addEventListener("mouseenter", () => {
+          cursor.style.opacity = "0";
+          ring.style.opacity = "0";
+          document.body.style.cursor = "auto";
+        });
+        browserFrame.addEventListener("mouseleave", () => {
+          cursor.style.opacity = "1";
+          ring.style.opacity = "1";
+          document.body.style.cursor = "none";
+        });
+      }
 
       // Project tab switcher
       const tabs = document.querySelectorAll(".proj-tab");
@@ -944,22 +946,24 @@
       });
 
       // Card mouse spotlight
-      const spotCards = document.querySelectorAll(".skill-card, .project-card, .tech-card, .highlight-item, .assess-left, .assess-right");
-      spotCards.forEach((card) => {
-        card.addEventListener("mousemove", (e) => {
-          const r = card.getBoundingClientRect();
-          const x = e.clientX - r.left;
-          const y = e.clientY - r.top;
-          const isAlt  = card.classList.contains("alt");
-          const isAlt2 = card.classList.contains("alt2");
-          const rgb = isAlt2 ? "34,211,238" : isAlt ? "59,130,246" : "249,115,22";
-          card.style.backgroundImage =
-            `radial-gradient(220px circle at ${x}px ${y}px, rgba(${rgb},0.09), transparent 80%)`;
+      if (!isTouch) {
+        const spotCards = document.querySelectorAll(".skill-card, .project-card, .tech-card, .highlight-item, .assess-left, .assess-right");
+        spotCards.forEach((card) => {
+          card.addEventListener("mousemove", (e) => {
+            const r = card.getBoundingClientRect();
+            const x = e.clientX - r.left;
+            const y = e.clientY - r.top;
+            const isAlt  = card.classList.contains("alt");
+            const isAlt2 = card.classList.contains("alt2");
+            const rgb = isAlt2 ? "34,211,238" : isAlt ? "59,130,246" : "249,115,22";
+            card.style.backgroundImage =
+              `radial-gradient(220px circle at ${x}px ${y}px, rgba(${rgb},0.09), transparent 80%)`;
+          });
+          card.addEventListener("mouseleave", () => {
+            card.style.backgroundImage = "";
+          });
         });
-        card.addEventListener("mouseleave", () => {
-          card.style.backgroundImage = "";
-        });
-      });
+      }
 
       // Side nav — active section tracking
       const sideNav  = document.getElementById("sideNav");
@@ -1040,6 +1044,7 @@
 
       // ─── TILT 3D ──────────────────────────────
       function initTilt() {
+        if (isTouch) return;
         const cards = document.querySelectorAll(
           ".skill-card, .tech-card, .assess-left, .assess-right, .project-card"
         );
@@ -1061,6 +1066,7 @@
 
       // ─── MAGNETIC BUTTONS ─────────────────────
       function initMagnetic() {
+        if (isTouch) return;
         document.querySelectorAll(".btn-primary, .btn-ghost").forEach((btn) => {
           btn.addEventListener("mousemove", (e) => {
             const r  = btn.getBoundingClientRect();
@@ -1222,8 +1228,9 @@
           for (let i = 0; i < pts.length; i++) {
             for (let j = i + 1; j < pts.length; j++) {
               const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
-              const dist = Math.sqrt(dx * dx + dy * dy);
-              if (dist < 115) {
+              const distSq = dx * dx + dy * dy;
+              if (distSq < 13225) {
+                const dist = Math.sqrt(distSq);
                 ctx.beginPath();
                 ctx.moveTo(pts[i].x, pts[i].y);
                 ctx.lineTo(pts[j].x, pts[j].y);
@@ -1352,6 +1359,7 @@
 
       // ─── CUSTOM TOOLTIPS ──────────────────────
       function initTooltips() {
+        if (isTouch) return;
         const tip = document.getElementById("customTooltip");
         if (!tip) return;
         document.querySelectorAll("[data-tooltip]").forEach((el) => {
@@ -1369,6 +1377,7 @@
 
       // ─── HOLO RINGS ───────────────────────────
       function initHoloRings() {
+        if (isTouch) return;
         document.querySelectorAll(".skill-card, .tech-card, .project-card").forEach((card) => {
           const ring = document.createElement("span");
           ring.className = "holo-ring";

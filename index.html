@@ -436,7 +436,6 @@
             <div class="browser-iframe-wrap" id="iframeWrap">
               <iframe
                 id="previewFrame"
-                src="https://learnly-edu.vercel.app/"
                 title="Demo do Projeto"
                 loading="lazy"
                 sandbox="allow-scripts allow-same-origin"
@@ -864,9 +863,9 @@
           });
         });
 
-      // Scroll progress
+      // Scroll progress (desktop only — repaints on every scroll on mobile)
       const scrollLine = document.getElementById("scrollLine");
-      window.addEventListener("scroll", () => {
+      if (!isTouch) window.addEventListener("scroll", () => {
         const pct =
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
           100;
@@ -882,23 +881,25 @@
           entries.forEach((e) => {
             if (e.isIntersecting) {
               e.target.classList.add("visible");
-              e.target.querySelectorAll(STAGGER_SELECTORS).forEach((child, i) => {
-                const delay = e.target.id === "sec-formacao" ? i * 300 + 100 : i * 55;
-                child.style.transitionDelay = `${delay}ms`;
-                child.querySelectorAll(TEXT_SEL).forEach((txt) => {
-                  setTimeout(() => scramble(txt), delay + 160);
+              if (!isTouch) {
+                e.target.querySelectorAll(STAGGER_SELECTORS).forEach((child, i) => {
+                  const delay = e.target.id === "sec-formacao" ? i * 300 + 100 : i * 55;
+                  child.style.transitionDelay = `${delay}ms`;
+                  child.querySelectorAll(TEXT_SEL).forEach((txt) => {
+                    setTimeout(() => scramble(txt), delay + 160);
+                  });
                 });
-              });
-              const lbl = e.target.querySelector(".section-label");
-              if (lbl) scramble(lbl);
-              e.target.querySelectorAll(".assess-label, .level-title, .project-tag, .project-tagline, .proj-tab-name, .meta-chip").forEach((el, i) => {
-                setTimeout(() => scramble(el), i * 70 + 200);
-              });
+                const lbl = e.target.querySelector(".section-label");
+                if (lbl) scramble(lbl);
+                e.target.querySelectorAll(".assess-label, .level-title, .project-tag, .project-tagline, .proj-tab-name, .meta-chip").forEach((el, i) => {
+                  setTimeout(() => scramble(el), i * 70 + 200);
+                });
+              }
               const fill = e.target.querySelector("#progressFill");
               const meta = e.target.querySelector(".progress-meta");
               if (fill) setTimeout(() => {
                 fill.style.width = "100%";
-                if (meta) {
+                if (meta && !isTouch) {
                   let p = 0;
                   const pid = setInterval(() => {
                     p += 2;
@@ -906,6 +907,8 @@
                     meta.textContent = `[${("█".repeat(f) + "░".repeat(10 - f))}] ${Math.min(100, p)}%  itera360 · 580h`;
                     if (p >= 100) clearInterval(pid);
                   }, 28);
+                } else if (meta) {
+                  meta.textContent = `[██████████] 100%  itera360 · 580h`;
                 }
               }, 500);
               observer.unobserve(e.target);
@@ -936,11 +939,12 @@
       const tabs = document.querySelectorAll(".proj-tab");
       const previewFrame = document.getElementById("previewFrame");
       const urlBar = document.getElementById("urlBar");
+      if (!isTouch) previewFrame.src = "https://learnly-edu.vercel.app/";
       tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
           tabs.forEach((t) => t.classList.remove("active"));
           tab.classList.add("active");
-          previewFrame.src = tab.dataset.url;
+          if (!isTouch) previewFrame.src = tab.dataset.url;
           urlBar.textContent = tab.dataset.label;
         });
       });
@@ -998,6 +1002,7 @@
 
 
       (function () {
+        if (isTouch) return;
         var IFRAME_W = 1280;
         var IFRAME_H = 900;
 
@@ -1029,6 +1034,7 @@
 
       // ─── CURSOR SPOTLIGHT ─────────────────────
       function initSpotlight() {
+        if (isTouch) return;
         const spot = document.getElementById("cursorSpotlight");
         if (!spot) return;
         let raf;
@@ -1115,6 +1121,7 @@
 
       // ─── H1 SPLIT LINE REVEAL ─────────────────
       function initH1Split() {
+        if (isTouch) return;
         const h1 = document.querySelector(".hero-name h1");
         if (!h1) return;
         h1.innerHTML =
@@ -1127,7 +1134,7 @@
       function initSplash() {
         const splash = document.getElementById("splash");
         if (!splash) return;
-        if (localStorage.getItem("splashDisabled")) { splash.remove(); return; }
+        if (isTouch || localStorage.getItem("splashDisabled")) { splash.remove(); return; }
 
         function hideSplash() {
           splash.classList.add("hide");
@@ -1210,12 +1217,15 @@
 
       // ─── PARTICLE NETWORK ─────────────────────
       function initParticles() {
+        if (isTouch) return;
         const canvas = document.getElementById("particleCanvas");
         if (!canvas) return;
         const ctx = canvas.getContext("2d");
         const hero = canvas.parentElement;
         const resize = () => { canvas.width = hero.offsetWidth; canvas.height = hero.offsetHeight; };
-        resize(); window.addEventListener("resize", resize);
+        resize();
+        let _rPT;
+        window.addEventListener("resize", () => { clearTimeout(_rPT); _rPT = setTimeout(resize, 120); });
         const COUNT = isTouch ? 20 : 55;
         const pts = Array.from({ length: COUNT }, () => ({
           x: Math.random() * canvas.width, y: Math.random() * canvas.height,
@@ -1253,6 +1263,7 @@
 
       // ─── TYPING EYEBROW ───────────────────────
       function initTyping() {
+        if (isTouch) return;
         const el = document.querySelector(".hero-eyebrow span");
         if (!el) return;
         const texts = [
@@ -1283,6 +1294,7 @@
 
       // ─── KONAMI CODE ──────────────────────────
       function initKonami() {
+        if (isTouch) return;
         const SEQ = [38,38,40,40,37,39,37,39,66,65];
         let idx = 0;
         const toast = document.getElementById("konamiToast");
@@ -1324,6 +1336,7 @@
         } catch(e) {}
       }
       function initSound() {
+        if (isTouch) return;
         document.querySelectorAll(".btn-primary, .proj-tab, .side-dot, #btnTop").forEach((el) => {
           el.addEventListener("click", () => playTick(1100, 0.022, 0.06));
         });
@@ -1409,6 +1422,7 @@
 
       // ─── SCREENSAVER ──────────────────────────
       function initScreensaver() {
+        if (isTouch) return;
         const IDLE_MS = 30000;
         const overlay = document.getElementById("screensaver");
         const canvas  = document.getElementById("ssCanvas");
@@ -1490,6 +1504,7 @@
 
       // ─── CONTEXT MENU ─────────────────────────
       function initContextMenu() {
+        if (isTouch) return;
         const menu = document.getElementById("ctxMenu");
         if (!menu) return;
 
@@ -1549,6 +1564,7 @@
 
       // ─── COMMAND PALETTE ──────────────────────
       function initCommandPalette() {
+        if (isTouch) return;
         const palette  = document.getElementById("cmdPalette");
         const input    = document.getElementById("cmdInput");
         const resultsEl = document.getElementById("cmdResults");
@@ -1628,6 +1644,7 @@
 
       // ─── PHOTO EASTER EGG ─────────────────────
       function initPhotoEgg() {
+        if (isTouch) return;
         const frame = document.querySelector(".photo-frame");
         if (!frame) return;
         const msgs = ["> hello.world()", "> user.greet() // 👋", "> whoami // dev"];
@@ -1677,10 +1694,13 @@
 
       // Count-up 580h after status bar fades in (~1.2s after load)
       const count580el = document.getElementById("count580");
-      if (count580el) setTimeout(() => countUp(count580el, 580, 1800), 1200);
+      if (count580el) {
+        if (isTouch) count580el.textContent = "580";
+        else setTimeout(() => countUp(count580el, 580, 1800), 1200);
+      }
 
       // Scramble status bar labels + values on page load (after fadeUp at ~1.15s)
-      setTimeout(() => {
+      if (!isTouch) setTimeout(() => {
         document.querySelectorAll(".si-label").forEach((el, i) => {
           setTimeout(() => scramble(el), i * 80);
         });

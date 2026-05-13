@@ -1263,24 +1263,117 @@ footer {
 @media (hover: none), (pointer: coarse) {
   .btn-primary, .btn-ghost { min-height: 48px; padding: 16px 24px; font-size: 13px; }
   .meta-chip, .proj-link { min-height: 44px; padding: 12px 16px; }
+
+  /* Hide ALL ambient glow orbs — giant blurred radial gradients with infinite keyframe translates */
+  .glow-orb { display: none !important; }
+
+  /* Kill the SVG fractalNoise overlays + grid dots on body */
+  body::before, body::after { display: none !important; }
+
+  /* Kill particle canvas, cursor spotlight, cursor trail, grain layer */
+  .hero-particles, #cursorSpotlight, #trailCanvas, .hero-grain { display: none !important; }
+
+  /* Holo rings (conic-gradient + mask + infinite rotation) — gone */
+  .holo-ring { display: none !important; }
+
+  /* Status-bar scan animation */
+  .status-bar::before { display: none !important; }
+
+  /* Remove ALL backdrop-filters — each creates a compositor layer */
+  .skill-card, .project-card, .tech-card,
+  .highlight-item, .assess-left, .assess-right,
+  .status-bar, .btn-ghost, .proj-link,
+  .btn-top, .proj-tab, .custom-tooltip,
+  .konami-toast, .toast-msg, .ctx-menu,
+  .cmd-palette, .recruiter-overlay { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+
+  /* Disable infinite animations that aren't load-bearing */
+  .tl-dot.pulse, .online-dot::before,
+  .progress-fill::after, .ss-name, .ss-hint,
+  .splash-caret { animation: none !important; }
+
+  /* Free up compositor — drop will-change hints */
+  .glow-orb, .photo-frame, .cursor-ring { will-change: auto !important; }
+
+  /* Photo glitch easter egg never fires on touch (JS-guarded), but kill keyframe just in case */
+  .photo-frame.egg-pop img { animation: none !important; }
 }
 
 @media (max-width: 700px) {
-  .wrapper { padding: 0 24px 80px; }
-  .hero { padding-top: 64px; }
-  .hero-top { flex-direction: column; gap: 24px; }
+  /* Simplify reveal — drop transform translateY (forces layout/composite),
+     keep only opacity fade. Stagger delays from JS are skipped on touch. */
+  .reveal { transform: none !important; transition: opacity 0.35s ease-out !important; }
+  .reveal .skill-card,
+  .reveal .highlight-item,
+  .reveal .tech-card,
+  .reveal .timeline-item {
+    transform: none !important;
+    transition: opacity 0.35s ease-out !important;
+    transition-delay: 0s !important;
+  }
+
+  /* H1 lines just appear — no slide reveal. Apply gradient directly to h1
+     since initH1Split() (which inserts .h1-line spans) is skipped on touch. */
+  .hero-name h1 .h1-line { transform: none !important; animation: none !important; }
+  .hero-name h1 {
+    background: linear-gradient(160deg, #fb923c 0%, #f97316 28%, #ea580c 55%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-name h1:hover { animation: none !important; }
+
+  /* Hero eyebrow / status bar fadeUp keep, but no transform overhead */
+  .hero-eyebrow, .hero-bio, .hero-ctas, .status-bar, .github-stats,
+  .hero-top { animation: none !important; opacity: 1 !important; transform: none !important; }
+
+  .wrapper { padding: 0 20px 60px; }
+  .hero { padding-top: 56px; }
+  .hero-top { flex-direction: column; gap: 20px; }
   .assessment-box { grid-template-columns: 1fr; }
-  .status-bar { flex-direction: column; }
-  .status-item { border-right: none; border-bottom: 1px solid var(--glass-border); }
-  body { cursor: auto; }
+
+  /* Status bar — 2 colunas em vez de pilha vertical */
+  .status-bar { display: grid; grid-template-columns: 1fr 1fr; }
+  .status-item { border-right: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); padding: 16px 18px; }
+  .status-item:nth-child(even) { border-right: none; }
+  .status-item:last-child { grid-column: 1 / -1; border-bottom: none; }
+
+  /* Cursor */
+  body, button, a { cursor: auto; }
   .cursor, .cursor-ring { display: none; }
-  .project-card { padding: 28px 24px; }
-  .project-logo { height: 140px; margin: -1.5rem -1.5rem 1rem; }
-  .assess-left, .assess-right { padding: 28px 24px; }
-  .level-title { font-size: 42px; }
+
+  /* CTAs — largura total para tap-targets */
+  .hero-ctas { flex-direction: column; align-items: stretch; gap: 10px; }
+  .btn-primary, .btn-ghost { justify-content: center; }
+
+  /* Esconde Live Preview — iframe inútil em mobile */
+  .project-preview { display: none; }
+
+  /* Cards */
+  .project-card { padding: 24px 20px; }
+  .project-logo { height: 120px; margin: -1.5rem -1.5rem 1rem; }
+  .assess-left, .assess-right { padding: 24px 20px; }
+  .level-title { font-size: 38px; }
   .skills-grid { grid-template-columns: 1fr; }
-  .hero-name h1 { font-size: clamp(54px, 15vw, 80px); }
-  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .hero-name h1 { font-size: clamp(52px, 15vw, 76px); }
+
+  /* Tech stack — 3 colunas */
+  .tech-stack-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Espaçamento mais compacto */
+  section { margin-bottom: 52px; }
+  .divider { margin-bottom: 52px; }
+
+  /* Remove shift horizontal nos highlight-items */
+  .highlight-item:hover { transform: none; }
+
+  /* Footer — Ctrl+K não faz sentido em touch */
+  .kbd-hint { display: none; }
+
+  /* Recruiter card */
+  .recruiter-card { padding: 28px 20px; }
+  .rc-ctas { flex-direction: column; }
+  .rc-ctas a, .rc-ctas button { flex: unset !important; width: 100%; justify-content: center; }
 }
 
 /* ─── PROJECT TABS ────────────────────────── */

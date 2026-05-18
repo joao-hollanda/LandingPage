@@ -1350,6 +1350,9 @@ footer {
   .project-preview { display: none; }
 
   /* Cards */
+  .skill-card, .tech-card, .assess-left, .assess-right, .project-card {
+    transform: none !important;
+  }
   .project-card { padding: 24px 20px; }
   .project-logo { height: 120px; margin: -1.5rem -1.5rem 1rem; }
   .assess-left, .assess-right { padding: 24px 20px; }

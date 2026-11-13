@@ -4,6 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hollanda — Developer</title>
+    <meta
+      name="description"
+      content="Portfólio do Hollanda — desenvolvedor backend .NET e React em Alfenas, MG. Criador do Learnly, plataforma de preparação para o ENEM com IA, em produção."
+    />
+    <meta name="theme-color" content="#020810" />
+    <link rel="canonical" href="https://landing-page-nu-five-51.vercel.app/" />
+
+    <!-- Open Graph / preview em LinkedIn, WhatsApp, Slack… -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Hollanda — Developer" />
+    <meta property="og:url" content="https://landing-page-nu-five-51.vercel.app/" />
+    <meta property="og:title" content="Hollanda — Desenvolvedor Backend .NET & React" />
+    <meta
+      property="og:description"
+      content="Clean Architecture, IA aplicada e produto real: conheça o Learnly e os projetos que construí."
+    />
+    <meta property="og:image" content="https://landing-page-nu-five-51.vercel.app/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Hollanda Dev. — Backend .NET, React e Arquitetura de Software" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hollanda — Desenvolvedor Backend .NET & React" />
+    <meta
+      name="twitter:description"
+      content="Clean Architecture, IA aplicada e produto real: conheça o Learnly e os projetos que construí."
+    />
+    <meta name="twitter:image" content="https://landing-page-nu-five-51.vercel.app/img/og-image.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="icon"
@@ -119,18 +148,18 @@
             <p class="hero-sub">
               Backend · Frontend · <strong>Arquitetura de Software</strong
               ><br />
-              Alfenas, MG · 1º Semestre — Ciência da Computação
+              Alfenas, MG · 2º Semestre — Ciência da Computação
             </p>
           </div>
         </div>
 
         <div class="hero-bio">
           <p>
-            Desenvolvedor com <strong>~1 ano de experiência</strong>, formado em
-            um intensivo de 580h com simulação profissional real — Scrum,
-            sprints, revisão de código e projetos em equipe. Atualmente no
-            <strong>primeiro semestre de Ciência da Computação</strong>, mas já
-            com experiência real de mercado.
+            Desenvolvedor com <strong>mais de 1 ano de experiência</strong>,
+            formado em um intensivo de 580h com simulação profissional real —
+            Scrum, sprints, revisão de código e projetos em equipe. Hoje no
+            <strong>segundo semestre de Ciência da Computação</strong> na
+            Unifal, com experiência real de mercado e clientes atendidos.
           </p>
           <p>
             Trabalho como <strong>monitor de programação</strong>, acumulando
@@ -141,9 +170,9 @@
           </p>
           <p>
             Meu projeto principal é o <strong>Learnly</strong>, uma plataforma
-            de preparação para o ENEM. Recentemente recebi oferta para
-            apresentar em escolas — passando de projeto de portfólio para
-            <em>produto real</em>.
+            de preparação para o ENEM no ar em <em>learnly.com.br</em> —
+            simulados com correção automática, correção de redação por IA,
+            mentor com function calling e estudo em grupo em tempo real.
           </p>
         </div>
 
@@ -246,29 +275,36 @@
               injeção de dependência e tomada de decisão com raciocínio de
               trade-off real.
             </div>
-            <div class="skill-level">
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot"></div>
-            </div>
+            <a
+              class="skill-proof"
+              href="https://github.com/joao-hollanda/Learnly.API"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="sp-label">onde usei</span>
+              <span class="sp-text">Learnly.API · 5 camadas, Domain sem dependências</span>
+              <span class="sp-arrow">↗</span>
+            </a>
           </div>
 
           <div class="skill-card">
             <div class="skill-icon">BACK.</div>
             <div class="skill-name">Backend .NET / C#</div>
             <div class="skill-desc">
-              APIs RESTful, EF Core, JWT, PostgreSQL via Neon. Segurança e
-              escalabilidade como prioridade desde o dia 1.
+              APIs RESTful, EF Core, JWT com refresh, PostgreSQL via Neon,
+              SignalR e rate limiting. Segurança e escalabilidade como
+              prioridade desde o dia 1.
             </div>
-            <div class="skill-level">
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot"></div>
-            </div>
+            <a
+              class="skill-proof"
+              href="https://github.com/joao-hollanda/Learnly.API/blob/main/Learnly.Api/Program.cs"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="sp-label">onde usei</span>
+              <span class="sp-text">Program.cs · JWT, CORS, rate limit, headers</span>
+              <span class="sp-arrow">↗</span>
+            </a>
           </div>
 
           <div class="skill-card alt">
@@ -276,32 +312,38 @@
             <div class="skill-name">React / Frontend</div>
             <div class="skill-desc">
               Componentização, refatoração de legado, CSS Modules, TanStack
-              Query. Avaliando migração React Native para o Learnly mobile.
+              Query e Framer Motion. Do app do Learnly a sites para clientes.
             </div>
-            <div class="skill-level">
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-            </div>
+            <a
+              class="skill-proof"
+              href="https://github.com/joao-hollanda/Learnly.APP"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="sp-label">onde usei</span>
+              <span class="sp-text">Learnly.APP + 2 sites de clientes</span>
+              <span class="sp-arrow">↗</span>
+            </a>
           </div>
 
           <div class="skill-card alt">
             <div class="skill-icon">AI.</div>
             <div class="skill-name">IA & LLMs</div>
             <div class="skill-desc">
-              Function calling, otimização de tokens e context injection
-              persistente. Roadmap de 6 meses em execução — de prompt
-              engineering até agent orchestration.
+              Function calling, modelo de visão para ler redação manuscrita,
+              otimização de tokens e context injection persistente — IA
+              integrada ao produto, não só no chat.
             </div>
-            <div class="skill-level">
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-            </div>
+            <a
+              class="skill-proof"
+              href="https://github.com/joao-hollanda/Learnly.API/blob/main/Learnly.Services/IAService/ChatbotTools.cs"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="sp-label">onde usei</span>
+              <span class="sp-text">ChatbotTools.cs · 8 tools do mentor</span>
+              <span class="sp-arrow">↗</span>
+            </a>
           </div>
 
           <div class="skill-card alt2">
@@ -311,13 +353,16 @@
               Foco em impacto de negócio — monetização, validação, mercado-alvo.
               Conecto decisões técnicas a impacto de negócio com clareza.
             </div>
-            <div class="skill-level">
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot"></div>
-            </div>
+            <a
+              class="skill-proof"
+              href="https://www.learnly.com.br/"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="sp-label">onde usei</span>
+              <span class="sp-text">learnly.com.br · produto no ar</span>
+              <span class="sp-arrow">↗</span>
+            </a>
           </div>
 
           <div class="skill-card alt2">
@@ -328,13 +373,16 @@
               PR sob mentoria sênior e entendo o ciclo completo de entrega em
               time.
             </div>
-            <div class="skill-level">
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot fill"></div>
-              <div class="dot"></div>
-            </div>
+            <a
+              class="skill-proof"
+              href="https://github.com/joao-hollanda/Learnly.API/blob/main/.github/workflows/ci.yml"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="sp-label">onde usei</span>
+              <span class="sp-text">branches + CI com ~320 testes</span>
+              <span class="sp-arrow">↗</span>
+            </a>
           </div>
         </div>
       </section>
@@ -343,7 +391,19 @@
       <section class="reveal" id="sec-projeto">
         <div class="section-label">// Projeto em Destaque</div>
         <div class="project-card">
-          <div class="project-tag">Produto em validação produtiva</div>
+          <div class="project-head">
+            <div class="project-tag">Produto em validação produtiva</div>
+            <div
+              class="api-status"
+              id="apiStatus"
+              data-state="checking"
+              data-tooltip="Ping real na API do Learnly, feito agora pelo seu navegador"
+              aria-live="polite"
+            >
+              <span class="api-dot"></span>
+              <span class="api-text" id="apiStatusText">API · verificando…</span>
+            </div>
+          </div>
           <img
             class="project-logo"
             src="./img/LearnlyLogoBranca.svg"
@@ -351,21 +411,23 @@
           />
           <div class="project-tagline">Plataforma ENEM · EdTech Brasil</div>
           <p class="project-desc">
-            Construí do zero — banco de questões,
-            <strong>feedback por IA</strong>, histórico de erros persistente e
-            chatbot contextualizado. Arquitetura em .NET com Clean Architecture
-            e React. Recentemente recebi oferta para
-            <strong>apresentar em escolas</strong>, transformando o projeto de
-            portfólio em produto real com considerações reais de escalabilidade.
+            Construí do zero e mantenho em produção — banco com questões do
+            ENEM de 2009 a 2023, <strong>correção de redação por IA</strong> a
+            partir da foto da folha, mentor com function calling, planos de
+            estudo e <strong>estudo em grupo em tempo real</strong>. Backend
+            .NET 8 em Clean Architecture e frontend React. Recebi oferta para
+            <strong>apresentar em escolas</strong> — o que trouxe
+            escalabilidade para o centro das decisões.
           </p>
           <div class="project-meta">
-            <span class="meta-chip">.NET Clean Architecture</span>
+            <span class="meta-chip">.NET 8 · Clean Architecture</span>
             <span class="meta-chip">React</span>
             <span class="meta-chip">PostgreSQL / Neon</span>
-            <span class="meta-chip">JWT Auth</span>
-            <span class="meta-chip">Groq API / LLaMA</span>
-            <span class="meta-chip">AI Features</span>
-            <span class="meta-chip">EdTech BR</span>
+            <span class="meta-chip">JWT + Refresh</span>
+            <span class="meta-chip">SignalR</span>
+            <span class="meta-chip">Groq + Mistral</span>
+            <span class="meta-chip">xUnit · GitHub Actions</span>
+            <span class="meta-chip">Docker · Render</span>
           </div>
           <div class="project-links">
             <a
@@ -397,14 +459,288 @@
           </div>
         </div>
 
-        <section class="project-preview" style="margin-top: 16px">
+      </section>
+
+      <!-- ─── CASE STUDY ────────────────────────── -->
+      <section class="reveal" id="sec-case">
+        <div class="section-label">// Case Study · Learnly por dentro</div>
+
+        <div class="case-stats">
+          <div class="cs-item">
+            <span class="cs-num" data-count="5">5</span><span class="cs-label">camadas</span>
+          </div>
+          <div class="cs-item">
+            <span class="cs-num" data-count="12">12</span><span class="cs-label">controllers</span>
+          </div>
+          <div class="cs-item">
+            <span class="cs-num" data-count="320" data-prefix="~">~320</span><span class="cs-label">testes no CI</span>
+          </div>
+          <div class="cs-item">
+            <span class="cs-num" data-count="8">8</span><span class="cs-label">tools de IA</span>
+          </div>
+        </div>
+
+        <div class="case-grid">
+          <!-- 01 · Arquitetura -->
+          <div class="case-card arch-card">
+            <div class="case-kicker">01 · Arquitetura</div>
+            <div class="case-title">Clean Architecture, com as setas certas</div>
+            <p class="case-text">
+              Passe o mouse (ou toque) nas camadas. As setas são as referências
+              reais entre os projetos da solution — o Domain não depende de
+              ninguém.
+            </p>
+            <div class="arch-wrap">
+              <div class="arch" id="archDiagram">
+                <button
+                  class="arch-layer l-api"
+                  data-uses="l-app l-domain"
+                  data-name="Learnly.Api"
+                  data-deps="→ Application, Domain"
+                  data-desc="Porta de entrada HTTP e WebSocket: controllers finos, ChatHub (SignalR), middleware de exceções, rate limiting e JWT em cookie HttpOnly. Nenhuma regra de negócio mora aqui."
+                >
+                  <span class="al-name">Api</span>
+                  <span class="al-sub">controllers · hubs · middlewares</span>
+                </button>
+                <div class="arch-arrow a-down" aria-hidden="true"></div>
+                <button
+                  class="arch-layer l-app"
+                  data-uses="l-domain l-repo l-svc"
+                  data-name="Learnly.Application"
+                  data-deps="→ Domain, Repository, Services"
+                  data-desc="Casos de uso (SimuladoAplicacao, RedacaoAplicacao, GrupoAplicacao…), validação com FluentValidation e DTOs. Orquestra repositórios e serviços externos."
+                >
+                  <span class="al-name">Application</span>
+                  <span class="al-sub">casos de uso · validators · DTOs</span>
+                </button>
+                <div class="arch-split" aria-hidden="true">
+                  <div class="arch-arrow a-left"></div>
+                  <div class="arch-arrow a-right"></div>
+                </div>
+                <div class="arch-row">
+                  <button
+                    class="arch-layer l-repo"
+                    data-uses="l-domain"
+                    data-name="Learnly.Repository"
+                    data-deps="→ Domain"
+                    data-desc="EF Core + PostgreSQL (Neon): DbContext, configurações de mapeamento, migrations e repositórios."
+                  >
+                    <span class="al-name">Repository</span>
+                    <span class="al-sub">EF Core · PostgreSQL</span>
+                  </button>
+                  <button
+                    class="arch-layer l-svc"
+                    data-uses="l-domain"
+                    data-name="Learnly.Services"
+                    data-deps="→ Domain"
+                    data-desc="Integrações externas isoladas atrás de interfaces: Groq e Mistral (LLMs), Resend (e-mail) e YouTube (busca de material de estudo)."
+                  >
+                    <span class="al-name">Services</span>
+                    <span class="al-sub">Groq · Mistral · Resend</span>
+                  </button>
+                </div>
+                <div class="arch-split join" aria-hidden="true">
+                  <div class="arch-arrow a-right"></div>
+                  <div class="arch-arrow a-left"></div>
+                </div>
+                <button
+                  class="arch-layer l-domain"
+                  data-name="Learnly.Domain"
+                  data-deps="zero dependências"
+                  data-desc="Entidades, enums e exceções de domínio — usuários, planos, simulados, redações e social. O núcleo não conhece banco, HTTP nem IA."
+                >
+                  <span class="al-name">Domain</span>
+                  <span class="al-sub">entidades · regras · exceções</span>
+                </button>
+              </div>
+              <div class="arch-detail" id="archDetail" aria-live="polite">
+                <div class="ad-name" id="adName">Learnly.Domain</div>
+                <div class="ad-deps" id="adDeps">zero dependências</div>
+                <p class="ad-desc" id="adDesc">
+                  Entidades, enums e exceções de domínio — usuários, planos,
+                  simulados, redações e social. O núcleo não conhece banco,
+                  HTTP nem IA.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 · Fluxo do simulado -->
+          <div class="case-card flow-card">
+            <div class="case-kicker">02 · Fluxo do simulado</div>
+            <div class="case-title">Da resposta ao feedback, sem desperdiçar token</div>
+            <ol class="flow">
+              <li>
+                <code>POST /api/simulado</code>
+                <span>sorteia questões por disciplina</span>
+              </li>
+              <li>
+                <code>PUT /api/simulado/responder/{id}</code>
+                <span>corrige e calcula a nota</span>
+              </li>
+              <li>
+                <code>ObterOuGerarExplicacoes()</code>
+                <span>reaproveita explicações já geradas; só as que faltam vão para a IA, todas numa chamada</span>
+              </li>
+              <li>
+                <code>GerarFeedbackAsync()</code>
+                <span>feedback geral do desempenho</span>
+              </li>
+              <li>
+                <code>PostgreSQL</code>
+                <span>persiste nota, feedback e explicações</span>
+              </li>
+            </ol>
+            <div class="case-note">
+              <strong>Decisão:</strong> a explicação de cada questão é gerada
+              uma vez e reaproveitada por todos os alunos. Menos chamadas,
+              menos custo, sem esbarrar no rate limit do provedor.
+            </div>
+          </div>
+
+          <!-- 03 · Mentor com function calling -->
+          <div class="case-card tools-card">
+            <div class="case-kicker">03 · Mentor com function calling</div>
+            <div class="case-title">A IA consulta e ajusta o plano do aluno</div>
+            <p class="case-text">
+              O mentor não só conversa: ele chama ferramentas do backend com os
+              dados reais do aluno. O <code>usuarioId</code> é injetado pelo
+              servidor — o modelo nunca escolhe de quem são os dados.
+            </p>
+            <div class="tool-list">
+              <span class="tool read">buscar_desempenho_do_aluno</span>
+              <span class="tool read">buscar_pontos_fracos_por_habilidade</span>
+              <span class="tool read">revisar_questoes_erradas</span>
+              <span class="tool read">buscar_plano_estudo_atual</span>
+              <span class="tool write">reajustar_carga_horaria_plano</span>
+              <span class="tool write">adicionar_ou_remover_disciplina</span>
+              <span class="tool write">reagendar_topicos_atrasados</span>
+              <span class="tool write">criar_eventos_estudo</span>
+            </div>
+            <div class="tool-legend">
+              <span class="tl-read">leitura</span>
+              <span class="tl-write">escrita</span>
+            </div>
+          </div>
+
+          <!-- 04 · Post-mortem IDOR -->
+          <div class="case-card pm-card" id="postmortem">
+            <div class="case-kicker">04 · Post-mortem</div>
+            <div class="case-title">IDOR em produção: como fechei a classe inteira de bug</div>
+            <div class="pm-grid">
+              <div class="pm-steps">
+                <div class="pm-step">
+                  <span class="pm-tag">o problema</span>
+                  Endpoints recebiam o <code>usuarioId</code> pela rota. Qualquer
+                  usuário logado podia trocar o número na URL e ler planos e
+                  simulados de outra pessoa.
+                </div>
+                <div class="pm-step">
+                  <span class="pm-tag">a correção</span>
+                  Criei o <code>BaseController.GetUserId()</code>: o id sai só
+                  do JWT. As rotas perderam o <code>{usuarioId}</code> e todo
+                  recurso buscado por ID ganhou checagem de dono.
+                </div>
+                <div class="pm-step">
+                  <span class="pm-tag">depois</span>
+                  Rate limiting por IP e por usuário, JWT com refresh
+                  endurecido, security headers e segredos fora do repositório.
+                </div>
+                <div class="pm-step">
+                  <span class="pm-tag">lição</span>
+                  Validar em cada endpoint é checklist; tirar o dado do alcance
+                  do cliente é design. Prefiro o segundo.
+                </div>
+              </div>
+              <div class="pm-code">
+                <div class="code-block before">
+                  <div class="code-head"><span>antes</span><span>SimuladoController.cs</span></div>
+<pre><code><span class="c-a">[HttpGet("Listar/{usuarioId}")]</span>
+<span class="c-k">public async</span> <span class="c-t">Task</span>&lt;<span class="c-t">IActionResult</span>&gt; Listar5(
+    [<span class="c-a">FromRoute</span>] <span class="c-k">int</span> usuarioId)
+{
+    <span class="c-c">// GET /api/simulado/Listar/42</span>
+    <span class="c-c">// → simulados do usuário 42,</span>
+    <span class="c-c">//   seja quem for que pediu</span>
+    <span class="c-k">var</span> simulados = <span class="c-k">await</span> _app.Listar5(usuarioId);</code></pre>
+                </div>
+                <div class="code-block after">
+                  <div class="code-head"><span>depois</span><span>SimuladoController.cs</span></div>
+<pre><code><span class="c-a">[HttpGet("Listar")]</span>
+<span class="c-k">public async</span> <span class="c-t">Task</span>&lt;<span class="c-t">IActionResult</span>&gt; Listar5()
+{
+    <span class="c-k">var</span> usuarioId = GetUserId(); <span class="c-c">// só do JWT</span>
+    <span class="c-k">if</span> (usuarioId == <span class="c-k">null</span>) <span class="c-k">return</span> Forbid();
+
+    <span class="c-k">var</span> simulados = <span class="c-k">await</span> _app.Listar5(usuarioId.Value);</code></pre>
+                </div>
+                <a
+                  class="code-caption"
+                  href="https://github.com/joao-hollanda/Learnly.API/commit/988e1e63dfed79bc37e5baf8469fa7dd484c69f6"
+                  target="_blank"
+                  rel="noopener"
+                  >trechos simplificados do commit 988e1e6 ↗</a
+                >
+              </div>
+            </div>
+            <div class="pm-timeline">
+              <div class="pmt-item"><span class="pmt-date">18 mar</span>fix nos controllers + BaseController</div>
+              <div class="pmt-item"><span class="pmt-date">24 mar</span>últimos endpoints corrigidos</div>
+              <div class="pmt-item"><span class="pmt-date">11 jun</span>hardening: rate limit, JWT, headers</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CLIENTES ──────────────────────────── -->
+      <section class="reveal" id="sec-clientes">
+        <div class="section-label">// Projetos para Clientes</div>
+        <div class="client-grid">
+          <article class="client-card c-amber">
+            <div class="client-kind">Site institucional + catálogo</div>
+            <h3 class="client-name">Davi Milla</h3>
+            <p class="client-desc">
+              Marca de massas artesanais congeladas que vende para padarias,
+              supermercados e eventos. Site com narrativa de scroll — "da
+              farinha ao forno" —, catálogo por categorias e contato direto
+              pelo WhatsApp.
+            </p>
+            <div class="client-chips">
+              <span>React 19</span><span>Framer Motion</span><span>Vercel</span>
+            </div>
+            <div class="client-actions">
+              <button class="client-btn" data-preview="1">ver preview ↓</button>
+              <a class="client-btn ghost" href="https://davimilla.vercel.app/" target="_blank" rel="noopener">abrir site ↗</a>
+            </div>
+          </article>
+
+          <article class="client-card c-red">
+            <div class="client-kind">Landing page de conversão</div>
+            <h3 class="client-name">Rogério Guincho</h3>
+            <p class="client-desc">
+              Guincho 24h em Alfenas e região. A página tem um objetivo: virar
+              ligação. Botões de ligar e de WhatsApp a um toque em qualquer
+              ponto, depoimentos, área de cobertura e domínio próprio.
+            </p>
+            <div class="client-chips">
+              <span>React 19</span><span>Vercel</span><span>domínio próprio</span>
+            </div>
+            <div class="client-actions">
+              <button class="client-btn" data-preview="2">ver preview ↓</button>
+              <a class="client-btn ghost" href="https://guinchoalfenas.com.br/" target="_blank" rel="noopener">abrir site ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-preview" id="livePreview">
           <div class="section-label">Live Preview</div>
 
           <div class="proj-tabs">
             <button
               class="proj-tab active"
-              data-url="https://learnly.com.br/"
+              data-url="https://www.learnly.com.br/"
               data-label="learnly.com.br"
+              data-shot="./img/previews/learnly.jpg"
             >
               <span class="proj-tab-num">01</span>
               <span class="proj-tab-name">Learnly</span>
@@ -413,6 +749,7 @@
               class="proj-tab"
               data-url="https://davimilla.vercel.app/"
               data-label="davimilla.vercel.app"
+              data-shot="./img/previews/davimilla.jpg"
             >
               <span class="proj-tab-num">02</span>
               <span class="proj-tab-name">Davi Milla</span>
@@ -421,6 +758,7 @@
               class="proj-tab"
               data-url="https://guinchoalfenas.com.br/"
               data-label="guinchoalfenas.com.br"
+              data-shot="./img/previews/guincho.jpg"
             >
               <span class="proj-tab-num">03</span>
               <span class="proj-tab-name">Rogério Guincho</span>
@@ -430,19 +768,44 @@
           <div class="browser-frame">
             <div class="browser-bar">
               <div class="dots"><span></span><span></span><span></span></div>
-              <div class="url-bar" id="urlBar">learnly-edu.vercel.app</div>
+              <a
+                class="url-bar"
+                id="urlBar"
+                href="https://www.learnly.com.br/"
+                target="_blank"
+                rel="noopener"
+                >learnly.com.br</a
+              >
             </div>
 
             <div class="browser-iframe-wrap" id="iframeWrap">
               <iframe
                 id="previewFrame"
-                title="Demo do Projeto"
+                title="Preview ao vivo do projeto"
                 loading="lazy"
                 sandbox="allow-scripts allow-same-origin"
               ></iframe>
+              <a
+                class="preview-shot-link"
+                id="previewShotLink"
+                href="https://www.learnly.com.br/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="preview-shot"
+                  id="previewShot"
+                  src="./img/previews/learnly.jpg"
+                  alt="Tela do projeto selecionado"
+                  loading="lazy"
+                  width="960"
+                  height="675"
+                />
+                <span class="preview-shot-hint">toque para abrir ↗</span>
+              </a>
             </div>
           </div>
-        </section>
+        </div>
       </section>
 
       <!-- ─── PONTOS FORTES ─────────────────────── -->
@@ -484,6 +847,7 @@
                 antes de monetizar. Segurança está no radar — inclusive ao
                 estabelecer padrões como o BaseController.GetUserId() pra
                 eliminar IDOR by design.
+                <a class="hi-link" href="#postmortem">ler o post-mortem ↑</a>
               </div>
             </div>
           </div>
@@ -505,9 +869,10 @@
             <div class="hi-content">
               <div class="hi-title">Projeto Que Virou Produto</div>
               <div class="hi-desc">
-                O Learnly recebeu oferta de divulgação em escolas — isso é
-                validação externa real, não pitch. Faz toda a diferença na forma
-                como penso escala, multi-tenancy e feature prioritization.
+                O Learnly saiu do portfólio: domínio próprio, deploy contínuo,
+                testes rodando no CI e hardening de segurança. Manter algo no
+                ar muda como penso escala, multi-tenancy e priorização de
+                features.
               </div>
             </div>
           </div>
@@ -539,9 +904,9 @@
               em equipe e revisão de código com feedback sênior.
             </p>
             <p class="assess-text" style="margin-top: 10px">
-              Primeiro semestre de <strong>Ciência da Computação</strong>, ~1
-              ano de experiência prática. O nível reflete o que a formação
-              entregou, não tempo de mercado.
+              Cursando <strong>Ciência da Computação</strong> na Unifal, com
+              mais de 1 ano de experiência prática. O nível reflete o que a
+              formação entregou, não tempo de mercado.
             </p>
             <div class="progress-track">
               <div class="progress-meta"></div>
@@ -566,8 +931,8 @@
               <div class="timeline-item">
                 <div class="tl-dot blue"></div>
                 <div>
-                  <div class="tl-title">Unifal · 1º sem. CC · 2026–</div>
-                  <div class="tl-sub">Ciência da Computação · Alfenas, MG</div>
+                  <div class="tl-title">Unifal · Ciência da Computação · 2026–</div>
+                  <div class="tl-sub">2º semestre · Alfenas, MG</div>
                 </div>
               </div>
 
@@ -585,10 +950,10 @@
                 <div class="tl-dot pulse"></div>
                 <div>
                   <div class="tl-title accent">
-                    Learnly · Em validação produtiva
+                    Learnly · Em produção · 2026
                   </div>
                   <div class="tl-sub">
-                    Oferta de divulgação em escolas recebida · 2026
+                    learnly.com.br · oferta de divulgação em escolas
                   </div>
                 </div>
               </div>
@@ -606,7 +971,7 @@
             class="tech-card"
             target="_blank"
             rel="noopener"
-            data-tooltip="<strong>.NET Core</strong> · Backend principal · ★★★★☆"
+            data-tooltip="<strong>.NET 8</strong> · backend do Learnly"
           >
             <img
               src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/dotnet.svg"
@@ -624,7 +989,7 @@
             class="tech-card"
             target="_blank"
             rel="noopener"
-            data-tooltip="<strong>C#</strong> · Linguagem primária · ★★★★☆"
+            data-tooltip="<strong>C#</strong> · linguagem principal"
           >
             <img
               src="img/Csharp.png"
@@ -642,7 +1007,7 @@
             class="tech-card"
             target="_blank"
             rel="noopener"
-            data-tooltip="<strong>React</strong> · Frontend · ★★★☆☆"
+            data-tooltip="<strong>React</strong> · Learnly.APP e sites de clientes"
           >
             <img
               src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/react.svg"
@@ -660,7 +1025,7 @@
             class="tech-card"
             target="_blank"
             rel="noopener"
-            data-tooltip="<strong>PostgreSQL</strong> · Banco relacional · ★★★☆☆"
+            data-tooltip="<strong>PostgreSQL</strong> · Neon + EF Core migrations"
           >
             <img
               src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/postgresql.svg"
@@ -678,7 +1043,7 @@
             class="tech-card"
             target="_blank"
             rel="noopener"
-            data-tooltip="<strong>Git</strong> · Controle de versão · ★★★★☆"
+            data-tooltip="<strong>Git</strong> · feature branches + PR review"
           >
             <img
               src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/git.svg"
@@ -696,7 +1061,7 @@
             class="tech-card"
             target="_blank"
             rel="noopener"
-            data-tooltip="<strong>Python</strong> · Scripting / IA · ★★☆☆☆"
+            data-tooltip="<strong>Python</strong> · scripts e estudos de IA"
           >
             <img
               src="img/Python.png"
@@ -709,14 +1074,55 @@
             />
             <div class="tech-name">Python</div>
           </a>
+          <a
+            href="https://www.docker.com/"
+            class="tech-card"
+            target="_blank"
+            rel="noopener"
+            data-tooltip="<strong>Docker</strong> · imagem da API do Learnly no Render"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg"
+              class="tech-icon"
+              data-color="#2496ED"
+              alt="Docker"
+              loading="lazy"
+              width="44"
+              height="44"
+            />
+            <div class="tech-name">Docker</div>
+          </a>
+          <a
+            href="https://github.com/features/actions"
+            class="tech-card"
+            target="_blank"
+            rel="noopener"
+            data-tooltip="<strong>GitHub Actions</strong> · build + testes a cada PR"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/githubactions.svg"
+              class="tech-icon"
+              data-color="#2088FF"
+              alt="GitHub Actions"
+              loading="lazy"
+              width="44"
+              height="44"
+            />
+            <div class="tech-name">Actions</div>
+          </a>
         </div>
       </section>
 
       <footer class="reveal">
         <div class="footer-left">
-          hollanda · <span>abril 2026</span> · Alfenas, Minas Gerais · Brasil
+          hollanda · atualizado em <span>novembro 2026</span> · Alfenas, Minas Gerais · Brasil
         </div>
-        <div class="footer-right">open to opportunities · há <span id="daysCounter">--</span> dias · <kbd class="kbd-hint">Ctrl+K</kbd></div>
+        <div class="footer-right">
+          <span>open to opportunities · há <span id="daysCounter">--</span> dias</span>
+          <span class="ft-sep">·</span>
+          <button class="sound-toggle" id="soundToggle" aria-pressed="true">som: on</button>
+          <span class="kbd-wrap"><span class="ft-sep">·</span> <kbd class="kbd-hint">Ctrl+K · terminal</kbd></span>
+        </div>
       </footer>
     </div>
 
@@ -746,7 +1152,8 @@
           <div class="rc-hl">580h de formação profissional real · Itera360</div>
           <div class="rc-hl">Learnly — produto EdTech em validação produtiva</div>
           <div class="rc-hl">Monitor de programação · revisão de PRs sob sênior</div>
-          <div class="rc-hl">1º sem. Ciência da Computação · Unifal</div>
+          <div class="rc-hl">Ciência da Computação · Unifal · 2º semestre</div>
+          <div class="rc-hl">2 sites entregues para clientes · no ar</div>
         </div>
         <div class="rc-ctas">
           <a href="https://github.com/joao-hollanda" target="_blank" rel="noopener" class="btn-primary" style="flex:1;justify-content:center;text-decoration:none">GitHub</a>
@@ -759,15 +1166,30 @@
     <!-- Custom tooltip -->
     <div id="customTooltip" class="custom-tooltip" aria-hidden="true"></div>
 
-    <!-- Command Palette -->
-    <div id="cmdPalette" class="cmd-palette">
-      <div class="cmd-modal">
-        <div class="cmd-search-row">
-          <span class="cmd-arrow">&gt;</span>
-          <input id="cmdInput" class="cmd-input" placeholder="buscar comando..." autocomplete="off" spellcheck="false" />
+    <!-- Terminal (Ctrl+K) -->
+    <div id="term" class="term-overlay">
+      <div class="term-window" role="dialog" aria-modal="true" aria-label="Terminal">
+        <div class="term-titlebar">
+          <div class="splash-mac"><span></span><span></span><span></span></div>
+          <span class="term-title">hollanda@dev: ~ — bash</span>
+          <button class="term-close" id="termClose" aria-label="Fechar terminal">esc</button>
         </div>
-        <div id="cmdResults" class="cmd-results"></div>
-        <div class="cmd-footer-hint">↑↓ navegar &nbsp;·&nbsp; ↵ executar &nbsp;·&nbsp; esc fechar</div>
+        <div class="term-body" id="termBody">
+          <div class="term-output" id="termOut"></div>
+          <div class="term-line">
+            <span class="term-prompt">hollanda@dev<span class="tp-sep">:</span><span class="tp-cwd">~</span><span class="tp-sep">$</span></span>
+            <input
+              id="termInput"
+              class="term-input"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+              aria-label="Comando do terminal"
+            />
+          </div>
+        </div>
+        <div class="term-suggest" id="termSuggest"></div>
+        <div class="term-footer">tab completa · ↑↓ histórico · esc fecha</div>
       </div>
     </div>
 
@@ -789,20 +1211,22 @@
       <button class="ctx-item" data-action="email">→ copy email</button>
       <div class="ctx-divider"></div>
       <button class="ctx-item" data-action="recruiter">recruiter mode</button>
-      <button class="ctx-item" data-action="palette">command palette</button>
+      <button class="ctx-item" data-action="palette">terminal · ctrl+k</button>
       <button class="ctx-item" data-action="top">↑ scroll to top</button>
     </div>
 
     <!-- Konami toast -->
     <div id="konamiToast" class="konami-toast">
       <span class="kt-tag">// ACHIEVEMENT_UNLOCKED</span>
-      <span class="kt-msg">Konami Code · você achou o easter egg 🎮</span>
+      <span class="kt-msg">Konami Code · au! au! 🐶 você achou o easter egg</span>
     </div>
 
     <!-- Side nav -->
     <nav class="side-nav" id="sideNav" aria-label="Navegação lateral">
       <a class="side-dot" href="#sec-competencias" data-label="Competências"></a>
       <a class="side-dot" href="#sec-projeto"      data-label="Projeto"></a>
+      <a class="side-dot" href="#sec-case"         data-label="Case Study"></a>
+      <a class="side-dot" href="#sec-clientes"     data-label="Clientes"></a>
       <a class="side-dot" href="#sec-diferenciais" data-label="Diferenciais"></a>
       <a class="side-dot" href="#sec-formacao"     data-label="Formação"></a>
       <a class="side-dot" href="#sec-stack"        data-label="Stack"></a>
@@ -873,8 +1297,8 @@
       }, { passive: true });
 
       // Reveal on scroll + stagger children
-      const STAGGER_SELECTORS = ".skill-card, .highlight-item, .tech-card, .timeline-item";
-      const TEXT_SEL = ".skill-name, .skill-icon, .hi-title, .hi-num, .tech-name, .tl-title, .tl-sub";
+      const STAGGER_SELECTORS = ".skill-card, .highlight-item, .tech-card, .timeline-item, .case-card, .client-card";
+      const TEXT_SEL = ".skill-name, .skill-icon, .hi-title, .hi-num, .tech-name, .tl-title, .tl-sub, .case-kicker, .client-kind";
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -893,6 +1317,9 @@
                 if (lbl) scramble(lbl);
                 e.target.querySelectorAll(".assess-label, .level-title, .project-tag, .project-tagline, .proj-tab-name, .meta-chip").forEach((el, i) => {
                   setTimeout(() => scramble(el), i * 70 + 200);
+                });
+                e.target.querySelectorAll("[data-count]").forEach((el) => {
+                  countUp(el, Number(el.dataset.count), 1400, el.dataset.prefix || "");
                 });
               }
               const fill = e.target.querySelector("#progressFill");
@@ -935,23 +1362,38 @@
         });
       }
 
-      // Project tab switcher
+      // Project tab switcher — iframe ao vivo no desktop, screenshot no touch
       const tabs = document.querySelectorAll(".proj-tab");
       const previewFrame = document.getElementById("previewFrame");
       const urlBar = document.getElementById("urlBar");
-      if (!isTouch) previewFrame.src = "https://learnly-edu.vercel.app/";
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          tabs.forEach((t) => t.classList.remove("active"));
-          tab.classList.add("active");
-          if (!isTouch) previewFrame.src = tab.dataset.url;
-          urlBar.textContent = tab.dataset.label;
+      const shotImg = document.getElementById("previewShot");
+      const shotLink = document.getElementById("previewShotLink");
+
+      function selectTab(tab) {
+        tabs.forEach((t) => t.classList.toggle("active", t === tab));
+        urlBar.textContent = tab.dataset.label;
+        urlBar.href = tab.dataset.url;
+        shotLink.href = tab.dataset.url;
+        if (isTouch) shotImg.src = tab.dataset.shot;
+        else previewFrame.src = tab.dataset.url;
+      }
+
+      if (!isTouch) previewFrame.src = tabs[0].dataset.url;
+      tabs.forEach((tab) => tab.addEventListener("click", () => selectTab(tab)));
+
+      // "ver preview" nos cards de clientes
+      document.querySelectorAll("[data-preview]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const tab = tabs[Number(btn.dataset.preview)];
+          if (!tab) return;
+          selectTab(tab);
+          document.getElementById("livePreview").scrollIntoView({ behavior: "smooth", block: "start" });
         });
       });
 
       // Card mouse spotlight
       if (!isTouch) {
-        const spotCards = document.querySelectorAll(".skill-card, .project-card, .tech-card, .highlight-item, .assess-left, .assess-right");
+        const spotCards = document.querySelectorAll(".skill-card, .project-card, .tech-card, .highlight-item, .assess-left, .assess-right, .case-card, .client-card");
         spotCards.forEach((card) => {
           card.addEventListener("mousemove", (e) => {
             const r = card.getBoundingClientRect();
@@ -972,8 +1414,11 @@
       // Side nav — active section tracking
       const sideNav  = document.getElementById("sideNav");
       const sideDots = sideNav ? sideNav.querySelectorAll(".side-dot") : [];
-      const sections = ["sec-competencias","sec-projeto","sec-diferenciais","sec-formacao","sec-stack"];
+      const sections = ["sec-competencias","sec-projeto","sec-case","sec-clientes","sec-diferenciais","sec-formacao","sec-stack"];
 
+      // Ativa a seção que cruza o meio da tela — funciona mesmo para seções
+      // mais altas que a viewport (o case study é), onde um threshold de 0.4
+      // nunca seria atingido.
       const navObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((e) => {
@@ -984,7 +1429,7 @@
             }
           });
         },
-        { threshold: 0.4 },
+        { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
       );
       sections.forEach((id) => {
         const el = document.getElementById(id);
@@ -1108,14 +1553,14 @@
       }
 
       // ─── COUNT-UP ─────────────────────────────
-      function countUp(el, target, duration) {
+      function countUp(el, target, duration, prefix = "") {
         let start = null;
         (function step(ts) {
           if (!start) start = ts;
           const p = Math.min((ts - start) / duration, 1);
-          el.textContent = Math.floor(p * target);
+          el.textContent = prefix + Math.floor(p * target);
           if (p < 1) requestAnimationFrame(step);
-          else el.textContent = target;
+          else el.textContent = prefix + target;
         })(performance.now());
       }
 
@@ -1293,36 +1738,124 @@
       }
 
       // ─── KONAMI CODE ──────────────────────────
+      function triggerKonami() {
+        const toast = document.getElementById("konamiToast");
+        if (!toast) return;
+        toast.classList.add("visible");
+        document.body.classList.add("konami-active");
+        playBark();
+        setTimeout(() => {
+          toast.classList.remove("visible");
+          document.body.classList.remove("konami-active");
+        }, 3800);
+      }
+
       function initKonami() {
         if (isTouch) return;
-        const SEQ = [38,38,40,40,37,39,37,39,66,65];
+        const SEQ = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"];
         let idx = 0;
-        const toast = document.getElementById("konamiToast");
         document.addEventListener("keydown", (e) => {
-          idx = e.keyCode === SEQ[idx] ? idx + 1 : (e.keyCode === SEQ[0] ? 1 : 0);
+          if (e.target.closest && e.target.closest("input, textarea")) return;
+          const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+          idx = k === SEQ[idx] ? idx + 1 : (k === SEQ[0] ? 1 : 0);
           if (idx === SEQ.length) {
             idx = 0;
-            if (!toast) return;
-            toast.classList.add("visible");
-            document.body.classList.add("konami-active");
-            playTick(440, 0.04, 0.3);
-            setTimeout(() => playTick(550, 0.035, 0.25), 180);
-            setTimeout(() => playTick(660, 0.03, 0.3), 340);
-            setTimeout(() => {
-              toast.classList.remove("visible");
-              document.body.classList.remove("konami-active");
-            }, 3800);
+            triggerKonami();
           }
         });
       }
 
       // ─── SOUND DESIGN ─────────────────────────
+      let soundOn = true;
+      try { soundOn = localStorage.getItem("soundOff") !== "1"; } catch (e) {}
+
+      // Antes do primeiro clique/tecla o navegador bloqueia áudio (e loga aviso)
+      const canPlayAudio = () =>
+        soundOn && !(navigator.userActivation && !navigator.userActivation.hasBeenActive);
+
       let _audioCtx;
       function getAudioCtx() {
         if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (_audioCtx.state === "suspended") _audioCtx.resume();
         return _audioCtx;
       }
+
+      // ─── LATIDO (easter egg) ──────────────────
+      // Se quiser usar um áudio de verdade, coloque o arquivo no projeto
+      // (ex.: ./sounds/latido.mp3) e aponte BARK_URL para ele. Vazio = latido
+      // sintetizado com Web Audio, sem arquivo nenhum.
+      const BARK_URL = "";
+
+      function synthBark(ctx, t, pitch) {
+        const dur = 0.17;
+        const out = ctx.createGain();
+        out.gain.setValueAtTime(0.0001, t);
+        out.gain.exponentialRampToValueAtTime(0.5, t + 0.012);
+        out.gain.exponentialRampToValueAtTime(0.22, t + 0.07);
+        out.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+
+        // Corpo do latido: dente-de-serra com subida rápida e queda de pitch
+        const osc = ctx.createOscillator();
+        osc.type = "sawtooth";
+        osc.frequency.setValueAtTime(420 * pitch, t);
+        osc.frequency.exponentialRampToValueAtTime(760 * pitch, t + 0.035);
+        osc.frequency.exponentialRampToValueAtTime(280 * pitch, t + dur);
+
+        // Formante ("boca" do cachorro)
+        const formant = ctx.createBiquadFilter();
+        formant.type = "bandpass";
+        formant.frequency.setValueAtTime(1300 * pitch, t);
+        formant.frequency.exponentialRampToValueAtTime(800 * pitch, t + dur);
+        formant.Q.value = 1.1;
+
+        // Rouquidão: ruído filtrado misturado ao tom
+        const len = Math.ceil(ctx.sampleRate * dur);
+        const buf = ctx.createBuffer(1, len, ctx.sampleRate);
+        const data = buf.getChannelData(0);
+        for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
+        const noise = ctx.createBufferSource();
+        noise.buffer = buf;
+        const noiseBp = ctx.createBiquadFilter();
+        noiseBp.type = "bandpass";
+        noiseBp.frequency.value = 1800 * pitch;
+        noiseBp.Q.value = 0.8;
+        const noiseGain = ctx.createGain();
+        noiseGain.gain.value = 0.35;
+
+        // Saturação leve pra dar "rosnado"
+        const shaper = ctx.createWaveShaper();
+        const curve = new Float32Array(256);
+        for (let i = 0; i < 256; i++) {
+          const x = (i / 128) - 1;
+          curve[i] = Math.tanh(x * 3);
+        }
+        shaper.curve = curve;
+
+        osc.connect(shaper); shaper.connect(formant); formant.connect(out);
+        noise.connect(noiseBp); noiseBp.connect(noiseGain); noiseGain.connect(out);
+        out.connect(ctx.destination);
+        osc.start(t); osc.stop(t + dur);
+        noise.start(t); noise.stop(t + dur);
+      }
+
+      function playBark() {
+        if (!canPlayAudio()) return;
+        if (BARK_URL) {
+          const a = new Audio(BARK_URL);
+          a.volume = 0.7;
+          a.play().catch(() => {});
+          return;
+        }
+        try {
+          const ctx = getAudioCtx();
+          const t = ctx.currentTime + 0.02;
+          synthBark(ctx, t, 1);
+          synthBark(ctx, t + 0.26, 1.06);
+        } catch (e) {}
+      }
+
       function playTick(freq = 900, vol = 0.022, dur = 0.07) {
+        if (!canPlayAudio()) return;
         try {
           const ctx = getAudioCtx();
           const osc = ctx.createOscillator();
@@ -1335,16 +1868,32 @@
           osc.start(); osc.stop(ctx.currentTime + dur);
         } catch(e) {}
       }
+      function setSound(on) {
+        soundOn = on;
+        try { localStorage.setItem("soundOff", on ? "0" : "1"); } catch (e) {}
+        const btn = document.getElementById("soundToggle");
+        if (btn) {
+          btn.textContent = on ? "som: on" : "som: off";
+          btn.setAttribute("aria-pressed", String(on));
+        }
+      }
+
+      // Só cliques fazem som — nada dispara no hover.
       function initSound() {
+        const toggle = document.getElementById("soundToggle");
+        if (toggle) {
+          setSound(soundOn);
+          toggle.addEventListener("click", () => {
+            setSound(!soundOn);
+            playTick(800, 0.02, 0.06);
+          });
+        }
         if (isTouch) return;
         document.querySelectorAll(".btn-primary, .proj-tab, .side-dot, #btnTop").forEach((el) => {
           el.addEventListener("click", () => playTick(1100, 0.022, 0.06));
         });
         document.querySelectorAll(".btn-ghost").forEach((el) => {
           el.addEventListener("click", () => playTick(900, 0.018, 0.06));
-        });
-        document.querySelectorAll(".skill-card, .tech-card, .highlight-item").forEach((el) => {
-          el.addEventListener("mouseenter", () => playTick(700, 0.010, 0.05));
         });
       }
 
@@ -1367,7 +1916,9 @@
         btn.addEventListener("click", open);
         if (closeBtn) closeBtn.addEventListener("click", close);
         overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
-        document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && overlay.classList.contains("visible")) close();
+        });
       }
 
       // ─── CUSTOM TOOLTIPS ──────────────────────
@@ -1391,7 +1942,7 @@
       // ─── HOLO RINGS ───────────────────────────
       function initHoloRings() {
         if (isTouch) return;
-        document.querySelectorAll(".skill-card, .tech-card, .project-card").forEach((card) => {
+        document.querySelectorAll(".skill-card, .tech-card, .project-card, .client-card").forEach((card) => {
           const ring = document.createElement("span");
           ring.className = "holo-ring";
           card.appendChild(ring);
@@ -1423,7 +1974,8 @@
       // ─── SCREENSAVER ──────────────────────────
       function initScreensaver() {
         if (isTouch) return;
-        const IDLE_MS = 30000;
+        // 90s: dá tempo de ler um parágrafo inteiro sem mexer o mouse
+        const IDLE_MS = 90000;
         const overlay = document.getElementById("screensaver");
         const canvas  = document.getElementById("ssCanvas");
         if (!overlay || !canvas) return;
@@ -1462,6 +2014,7 @@
         }
 
         function activate() {
+          if (document.hidden) { timer = setTimeout(activate, IDLE_MS); return; }
           overlay.classList.add("active");
           if (!raf) draw();
           playTick(220, 0.02, 0.55);
@@ -1519,8 +2072,13 @@
         }
         function hide() { menu.classList.remove("visible"); }
 
+        // Menu próprio só em área "vazia". Em links, imagens, campos de texto
+        // ou com texto selecionado, o menu nativo continua funcionando —
+        // "copiar link" e "abrir em nova aba" não podem sumir.
         document.addEventListener("contextmenu", (e) => {
-          if (e.target.closest(".browser-frame")) return;
+          if (e.target.closest(".browser-frame, a, img, input, textarea, pre, code")) return;
+          const sel = window.getSelection();
+          if (sel && String(sel).trim()) return;
           e.preventDefault();
           show(e.clientX, e.clientY);
         });
@@ -1536,7 +2094,7 @@
             if (a === "linkedin") window.open("https://linkedin.com/in/joao-victor-hollanda", "_blank");
             if (a === "email")    { navigator.clipboard.writeText("joao.martinshollanda@gmail.com"); showToast("// email copiado ✓"); playTick(700,0.02,0.1); }
             if (a === "recruiter") document.getElementById("btnRecruiter").click();
-            if (a === "palette")  document.dispatchEvent(new KeyboardEvent("keydown", {key:"k", ctrlKey:true, bubbles:true}));
+            if (a === "palette")  openTerminal();
             if (a === "top")      window.scrollTo({top:0, behavior:"smooth"});
           });
         });
@@ -1562,67 +2120,404 @@
         })();
       }
 
-      // ─── COMMAND PALETTE ──────────────────────
-      function initCommandPalette() {
-        if (isTouch) return;
-        const palette  = document.getElementById("cmdPalette");
-        const input    = document.getElementById("cmdInput");
-        const resultsEl = document.getElementById("cmdResults");
-        if (!palette || !input) return;
+      // ─── LEARNLY API PING ─────────────────────
+      // fetch no-cors: a resposta é opaca (a API só libera CORS pro próprio
+      // front), mas a promise só resolve se o servidor respondeu — dá pra
+      // medir se está no ar e a latência sem precisar ler o corpo.
+      const LEARNLY_PING = "https://learnly-api-yrdu.onrender.com/api/login/AuthCheck";
 
-        const COMMANDS = [
-          { label: "→ competências",      tag: "nav",    fn: () => document.getElementById("sec-competencias").scrollIntoView({behavior:"smooth"}) },
-          { label: "→ projeto",           tag: "nav",    fn: () => document.getElementById("sec-projeto").scrollIntoView({behavior:"smooth"}) },
-          { label: "→ diferenciais",      tag: "nav",    fn: () => document.getElementById("sec-diferenciais").scrollIntoView({behavior:"smooth"}) },
-          { label: "→ formação",          tag: "nav",    fn: () => document.getElementById("sec-formacao").scrollIntoView({behavior:"smooth"}) },
-          { label: "→ stack",             tag: "nav",    fn: () => document.getElementById("sec-stack").scrollIntoView({behavior:"smooth"}) },
-          { label: "open github",         tag: "link",   fn: () => window.open("https://github.com/joao-hollanda","_blank") },
-          { label: "open linkedin",       tag: "link",   fn: () => window.open("https://linkedin.com/in/joao-victor-hollanda","_blank") },
-          { label: "send email",          tag: "link",   fn: () => window.location = "mailto:joao.martinshollanda@gmail.com?subject=Olá Hollanda — Oportunidade" },
-          { label: "recruiter mode",      tag: "mode",   fn: () => { close(); document.getElementById("btnRecruiter").click(); } },
-          { label: "scroll to top",       tag: "action", fn: () => window.scrollTo({top:0,behavior:"smooth"}) },
-          { label: "konami code",         tag: "secret", fn: () => { close(); [38,38,40,40,37,39,37,39,66,65].forEach((k,i) => setTimeout(() => document.dispatchEvent(new KeyboardEvent("keydown",{keyCode:k,bubbles:true})),i*60)); } },
-        ];
+      function pingLearnly(timeoutMs = 60000) {
+        const ctrl = new AbortController();
+        const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+        const t0 = performance.now();
+        return fetch(LEARNLY_PING, { mode: "no-cors", cache: "no-store", credentials: "omit", signal: ctrl.signal })
+          .then(() => ({ ok: true, ms: Math.round(performance.now() - t0) }))
+          .catch(() => ({ ok: false }))
+          .finally(() => clearTimeout(timer));
+      }
 
-        let filtered = [...COMMANDS], sel = 0;
+      // 1º ping acorda o servidor / abre a conexão; o 2º mede a latência real
+      async function checkLearnly(onSlow) {
+        const slow = setTimeout(() => onSlow && onSlow(), 3000);
+        const first = await pingLearnly();
+        clearTimeout(slow);
+        if (!first.ok) return first;
+        const second = await pingLearnly(8000);
+        return second.ok ? second : first;
+      }
 
-        function render() {
-          resultsEl.innerHTML = "";
-          filtered.forEach((cmd, i) => {
-            const d = document.createElement("div");
-            d.className = "cmd-item" + (i === sel ? " active" : "");
-            d.innerHTML = `<span class="cmd-label">${cmd.label}</span><span class="cmd-tag">${cmd.tag}</span>`;
-            d.addEventListener("click", () => { cmd.fn(); close(); });
-            resultsEl.appendChild(d);
+      function initApiStatus() {
+        const el  = document.getElementById("apiStatus");
+        const txt = document.getElementById("apiStatusText");
+        if (!el || !txt) return;
+        const set = (state, text) => { el.dataset.state = state; txt.textContent = text; };
+        const io = new IntersectionObserver((entries) => {
+          if (!entries.some((e) => e.isIntersecting)) return;
+          io.disconnect();
+          checkLearnly(() => set("waking", "API · acordando o servidor…")).then((r) => {
+            if (r.ok) set("online", `API online · ${r.ms}ms`);
+            else set("offline", "API sem resposta agora");
           });
-          resultsEl.children[sel]?.scrollIntoView({block:"nearest"});
+        });
+        io.observe(el);
+      }
+
+      // ─── ARQUITETURA INTERATIVA ───────────────
+      function initArch() {
+        const layers = document.querySelectorAll(".arch-layer");
+        const nameEl = document.getElementById("adName");
+        const depsEl = document.getElementById("adDeps");
+        const descEl = document.getElementById("adDesc");
+        if (!layers.length || !nameEl) return;
+        function select(layer) {
+          const uses = (layer.dataset.uses || "").split(" ").filter(Boolean);
+          layers.forEach((l) => {
+            l.classList.toggle("active", l === layer);
+            l.classList.toggle("uses", uses.some((c) => l.classList.contains(c)));
+          });
+          nameEl.textContent = layer.dataset.name;
+          depsEl.textContent = layer.dataset.deps;
+          descEl.textContent = layer.dataset.desc;
+        }
+        layers.forEach((l) => {
+          l.addEventListener("mouseenter", () => select(l));
+          l.addEventListener("focus", () => select(l));
+          l.addEventListener("click", () => select(l));
+        });
+        select(document.querySelector(".arch-layer.l-domain") || layers[0]);
+      }
+
+      // ─── TERMINAL (Ctrl+K) ────────────────────
+      let openTerminal = () => {};
+
+      function initTerminal() {
+        if (isTouch) return;
+        const overlay = document.getElementById("term");
+        const out     = document.getElementById("termOut");
+        const input   = document.getElementById("termInput");
+        const body    = document.getElementById("termBody");
+        const suggest = document.getElementById("termSuggest");
+        const closeBt = document.getElementById("termClose");
+        if (!overlay || !input) return;
+
+        const EMAIL = "joao.martinshollanda@gmail.com";
+        const LINKS = {
+          github:    "https://github.com/joao-hollanda",
+          linkedin:  "https://linkedin.com/in/joao-victor-hollanda",
+          learnly:   "https://www.learnly.com.br/",
+          davimilla: "https://davimilla.vercel.app/",
+          guincho:   "https://guinchoalfenas.com.br/",
+        };
+        const SECTIONS = {
+          competencias: "sec-competencias",
+          projeto:      "sec-projeto",
+          case:         "sec-case",
+          clientes:     "sec-clientes",
+          diferenciais: "sec-diferenciais",
+          formacao:     "sec-formacao",
+          stack:        "sec-stack",
+        };
+        const FILES = {
+          "sobre.md":
+`# Hollanda
+dev backend .NET & React · Alfenas, MG
+
+- Ciência da Computação na Unifal (2º semestre)
+- Itera360: 580h de formação full stack com Scrum e code review
+- monitor de programação: dev, PR review e mentoria
+- mais de 1 ano de experiência prática
+
+prefiro chegar com uma hipótese formada antes de pedir ajuda.`,
+          "learnly.md":
+`# Learnly — preparatório ENEM com IA
+https://www.learnly.com.br
+
+stack   .NET 8 · EF Core · PostgreSQL (Neon) · React · SignalR
+ia      Groq + Mistral · function calling (8 tools) · visão p/ redação
+infra   Docker · Render · Vercel · GitHub Actions (~320 testes)
+
+destaques
+- explicação de cada questão gerada 1x e reaproveitada por todos
+- redação manuscrita → foto → transcrição → correção nas 5 competências
+- IDOR fechado por design: o userId só sai do JWT
+
+dica: rode \`status\` pra pingar a API agora.`,
+          "stack.txt":
+`backend   C# · .NET 8 · ASP.NET Core · EF Core · SignalR · FluentValidation
+frontend  React · TanStack Query · CSS Modules · Framer Motion
+dados     PostgreSQL (Neon)
+ia        Groq · Mistral · function calling
+devops    Git · Docker · GitHub Actions · Render · Vercel
+extra     Python`,
+          "contato.txt":
+`email     ${EMAIL}   (rode \`email\` pra copiar)
+github    https://github.com/joao-hollanda
+linkedin  https://linkedin.com/in/joao-victor-hollanda`,
+          "clientes/davimilla.md":
+`# Davi Milla — massas artesanais congeladas
+site institucional + catálogo por categorias
+narrativa de scroll "da farinha ao forno" e WhatsApp direto
+React 19 · Framer Motion · Vercel
+https://davimilla.vercel.app`,
+          "clientes/rogerio-guincho.md":
+`# Rogério Guincho — guincho 24h em Alfenas
+landing page de conversão: tudo leva pra uma ligação
+botões de ligar/WhatsApp fixos, depoimentos, área de cobertura
+React 19 · Vercel · domínio próprio
+https://guinchoalfenas.com.br`,
+        };
+        const COMMANDS = ["help","whoami","ls","cat","cd","open","status","git","email","recruiter","som","clear","exit"];
+        const HIDDEN   = ["sudo","konami","woof","latir","au","rm","pwd","date","echo","vim","nano","ping"];
+        const QUICK    = ["help","whoami","cat learnly.md","status","git log"];
+
+        const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+
+        // texto confiável (os arquivos acima) → HTML com links, títulos e `código`
+        function fmt(text) {
+          return esc(text)
+            .split("\n")
+            .map((ln) => ln.startsWith("# ") ? `<span class="t-h">${ln.slice(2)}</span>` : ln)
+            .join("\n")
+            .replace(/(https:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
+            .replace(/`([^`]+)`/g, '<span class="t-code">$1</span>');
+        }
+
+        function print(html, cls = "") {
+          const d = document.createElement("div");
+          d.className = "t-block " + cls;
+          d.innerHTML = html;
+          out.appendChild(d);
+          body.scrollTop = body.scrollHeight;
+          return d;
+        }
+
+        function scrollToSection(id) {
+          close();
+          setTimeout(() => {
+            if (id) document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+            else window.scrollTo({ top: 0, behavior: "smooth" });
+          }, 180);
+        }
+
+        function resolveFile(arg) {
+          if (!arg) return null;
+          const a = arg.replace(/^~\//, "").replace(/^\.\//, "");
+          if (FILES[a]) return a;
+          if (FILES["clientes/" + a]) return "clientes/" + a;
+          return null;
+        }
+
+        const ago = (iso) => {
+          const d = Math.floor((Date.now() - new Date(iso)) / 86400000);
+          return d <= 0 ? "hoje" : d === 1 ? "ontem" : `há ${d} dias`;
+        };
+
+        const run = {
+          help() {
+            print(fmt(
+`comandos:
+  whoami            quem sou eu
+  ls [clientes]     lista arquivos
+  cat <arquivo>     mostra um arquivo
+  cd <seção>        vai até uma seção da página
+  open <alvo>       github · linkedin · learnly · davimilla · guincho
+  status            ping ao vivo na API do Learnly
+  git log           últimos commits do Learnly.API
+  email             copia meu e-mail
+  recruiter         modo recrutador
+  som [on|off]      liga/desliga os sons
+  clear · exit
+
+tem mais coisa escondida. boa caça.`));
+          },
+          whoami() {
+            print(fmt(
+`hollanda — dev backend .NET & React · Alfenas, MG
+CC na Unifal (2º sem.) · Itera360 (580h) · monitor de programação
+criador do Learnly → https://www.learnly.com.br`));
+          },
+          ls(args) {
+            const dir = (args[0] || "").replace(/\/$/, "");
+            if (!dir || dir === "~" || dir === "." || dir === "-la" || dir === "-l") {
+              print('sobre.md  learnly.md  stack.txt  contato.txt  <span class="t-dir">clientes/</span>');
+            } else if (dir === "clientes") {
+              print("davimilla.md  rogerio-guincho.md");
+            } else {
+              print(`ls: não foi possível acessar '${esc(dir)}': arquivo ou diretório inexistente`, "t-err");
+            }
+          },
+          cat(args) {
+            if (!args[0]) return print("uso: cat &lt;arquivo&gt; — rode <span class=\"t-code\">ls</span> pra ver os arquivos", "t-err");
+            if (args[0].replace(/\/$/, "") === "clientes") return print("cat: clientes: é um diretório", "t-err");
+            const f = resolveFile(args[0]);
+            if (!f) return print(`cat: ${esc(args[0])}: arquivo não encontrado`, "t-err");
+            print(fmt(FILES[f]));
+          },
+          cd(args) {
+            const t = (args[0] || "~").replace(/\/$/, "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+            if (t === "~" || t === "/" || t === "..") return scrollToSection(null);
+            if (SECTIONS[t]) return scrollToSection(SECTIONS[t]);
+            print(`cd: seção não existe: ${esc(args[0])}\nseções: ${Object.keys(SECTIONS).join(" · ")}`, "t-err");
+          },
+          open(args) {
+            const t = (args[0] || "").toLowerCase();
+            if (!LINKS[t]) return print(`uso: open &lt;alvo&gt; — ${Object.keys(LINKS).join(" · ")}`, "t-err");
+            window.open(LINKS[t], "_blank", "noopener");
+            print(`abrindo ${esc(LINKS[t])} …`, "t-dim");
+          },
+          async status() {
+            const line = print("pingando learnly-api-yrdu.onrender.com …", "t-dim");
+            const r = await checkLearnly(() => { line.textContent = "servidor dormindo, acordando… (pode levar ~30s)"; });
+            if (r.ok) print(`<span class="t-ok">●</span> API do Learnly online · ${r.ms}ms`);
+            else print("○ sem resposta agora — tenta de novo em alguns segundos", "t-err");
+          },
+          async git(args) {
+            if (args[0] !== "log") return print("uso: git log", "t-err");
+            const line = print("buscando commits em joao-hollanda/Learnly.API …", "t-dim");
+            try {
+              const res = await fetch("https://api.github.com/repos/joao-hollanda/Learnly.API/commits?per_page=6");
+              if (!res.ok) throw new Error(res.status);
+              const commits = await res.json();
+              line.remove();
+              print(commits.map((c) =>
+                `<span class="t-sha">${esc(c.sha.slice(0, 7))}</span>  ${esc(c.commit.message.split("\n")[0])}  <span class="t-dim">· ${ago(c.commit.author.date)}</span>`
+              ).join("\n"));
+            } catch (e) {
+              line.textContent = "não deu pra falar com o GitHub agora (limite da API pública?). tenta mais tarde.";
+              line.classList.add("t-err");
+            }
+          },
+          email() {
+            navigator.clipboard.writeText(EMAIL)
+              .then(() => print(`copiado: ${esc(EMAIL)} ✓`, "t-ok"))
+              .catch(() => print(esc(EMAIL)));
+          },
+          recruiter() { close(); document.getElementById("btnRecruiter").click(); },
+          som(args) {
+            const v = (args[0] || "").toLowerCase();
+            setSound(v === "on" ? true : v === "off" ? false : !soundOn);
+            print(`som: ${soundOn ? "on" : "off"}`, "t-dim");
+          },
+          clear() { out.innerHTML = ""; },
+          exit() { close(); },
+
+          // ── escondidos ──
+          sudo() { print("hollanda não está no arquivo sudoers. Este incidente será reportado. 🚨", "t-err"); },
+          konami() { close(); setTimeout(triggerKonami, 200); },
+          woof() { playBark(); print("au! au! 🐶"); },
+          latir() { run.woof(); },
+          au() { run.woof(); },
+          rm(args) {
+            if (args.includes("-rf")) print("boa tentativa. tá tudo no git 😉", "t-err");
+            else print("rm: operação não permitida neste portfólio", "t-err");
+          },
+          pwd() { print("/home/hollanda"); },
+          date() { print(esc(new Date().toLocaleString("pt-BR"))); },
+          echo(args) { print(esc(args.join(" "))); },
+          vim() { print("calma, aqui não precisa de :q! — é só digitar exit", "t-dim"); },
+          nano() { run.vim(); },
+          ping() { return run.status(); },
+        };
+
+        const history = [];
+        let hIdx = 0;
+
+        function exec(raw) {
+          const cmdline = raw.trim();
+          print(`<span class="term-prompt">hollanda@dev<span class="tp-sep">:</span><span class="tp-cwd">~</span><span class="tp-sep">$</span></span> ${esc(cmdline)}`, "t-echo");
+          if (!cmdline) return;
+          history.push(cmdline);
+          hIdx = history.length;
+          const [name, ...args] = cmdline.split(/\s+/);
+          const key = name.toLowerCase();
+          const fn = Object.prototype.hasOwnProperty.call(run, key) ? run[key] : null;
+          if (fn) fn(args);
+          else print(`comando não encontrado: ${esc(name)} — digite <span class="t-code">help</span>`, "t-err");
+        }
+
+        function complete() {
+          const val = input.value;
+          const parts = val.split(/\s+/);
+          let pool, prefix;
+          if (parts.length <= 1) {
+            pool = COMMANDS; prefix = "";
+          } else {
+            const c = parts[0].toLowerCase();
+            pool = c === "cat" ? Object.keys(FILES)
+                 : c === "cd" ? Object.keys(SECTIONS)
+                 : c === "open" ? Object.keys(LINKS)
+                 : c === "git" ? ["log"]
+                 : c === "som" ? ["on", "off"]
+                 : c === "ls" ? ["clientes"]
+                 : [];
+            prefix = parts.slice(0, -1).join(" ") + " ";
+          }
+          const last = parts[parts.length - 1];
+          const hits = pool.filter((p) => p.startsWith(last));
+          if (hits.length === 1) input.value = prefix + hits[0] + (parts.length <= 1 ? " " : "");
+          else if (hits.length > 1) print(hits.join("  "), "t-dim");
         }
 
         function open() {
-          palette.classList.add("visible");
-          input.value = ""; filtered = [...COMMANDS]; sel = 0; render();
+          overlay.classList.add("visible");
+          if (!out.childElementCount) {
+            print(fmt(
+`hollanda.dev — terminal interativo
+digite \`help\` pra ver os comandos · tab completa · ↑↓ histórico`), "t-dim");
+          }
           setTimeout(() => input.focus(), 40);
           playTick(820, 0.022, 0.09);
         }
         function close() {
-          palette.classList.remove("visible");
+          if (!overlay.classList.contains("visible")) return;
+          overlay.classList.remove("visible");
+          input.blur();
           playTick(600, 0.016, 0.07);
         }
+        openTerminal = open;
+
+        QUICK.forEach((q) => {
+          const b = document.createElement("button");
+          b.className = "term-chip";
+          b.textContent = q;
+          b.addEventListener("click", () => { exec(q); input.focus(); });
+          suggest.appendChild(b);
+        });
 
         document.addEventListener("keydown", (e) => {
-          if ((e.metaKey || e.ctrlKey) && e.key === "k") { e.preventDefault(); palette.classList.contains("visible") ? close() : open(); return; }
-          if (!palette.classList.contains("visible")) return;
-          if (e.key === "Escape") { close(); return; }
-          if (e.key === "ArrowDown") { e.preventDefault(); sel = Math.min(sel+1, filtered.length-1); render(); }
-          if (e.key === "ArrowUp")   { e.preventDefault(); sel = Math.max(sel-1, 0); render(); }
-          if (e.key === "Enter")     { filtered[sel]?.fn(); close(); }
+          if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+            e.preventDefault();
+            overlay.classList.contains("visible") ? close() : open();
+            return;
+          }
+          if (overlay.classList.contains("visible") && e.key === "Escape") close();
         });
-        input.addEventListener("input", () => {
-          const q = input.value.toLowerCase();
-          filtered = COMMANDS.filter(c => c.label.includes(q) || c.tag.includes(q));
-          sel = 0; render();
+
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            const v = input.value;
+            input.value = "";
+            exec(v);
+          } else if (e.key === "Tab") {
+            e.preventDefault();
+            complete();
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            if (hIdx > 0) input.value = history[--hIdx];
+          } else if (e.key === "ArrowDown") {
+            e.preventDefault();
+            hIdx = Math.min(hIdx + 1, history.length);
+            input.value = history[hIdx] || "";
+          } else if (e.key.toLowerCase() === "l" && e.ctrlKey) {
+            e.preventDefault();
+            run.clear();
+          }
         });
-        palette.addEventListener("click", (e) => { if (e.target === palette) close(); });
+
+        body.addEventListener("click", () => { if (!String(window.getSelection())) input.focus(); });
+        overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+        if (closeBt) closeBt.addEventListener("click", close);
       }
 
       // ─── GITHUB STATS ─────────────────────────
@@ -1688,7 +2583,9 @@
       initEmailCopy();
       initContextMenu();
       initParallax();
-      initCommandPalette();
+      initTerminal();
+      initApiStatus();
+      initArch();
       initGithubStats();
       initPhotoEgg();
 
@@ -1718,6 +2615,7 @@
         const parser = new DOMParser();
         const svgDoc = parser.parseFromString(text, "image/svg+xml");
         const svg = svgDoc.querySelector("svg");
+        if (!svg) return; // ícones PNG (C#) ficam como <img>
         svg.setAttribute("fill", imgEl.dataset.color);
         svg.setAttribute("width", imgEl.getAttribute("width"));
         svg.setAttribute("height", imgEl.getAttribute("height"));
